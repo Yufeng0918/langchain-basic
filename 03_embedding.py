@@ -18,6 +18,8 @@ docs = loader.load_and_split(
 )
 
 embeddings = OpenAIEmbeddings()
+print("embedddings: ", embeddings)
+
 db = Chroma.from_documents(
     docs,
     embedding=embeddings,
